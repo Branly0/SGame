@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cflrvdghx5n24"]
+
+[ext_resource type="Texture2D" uid="uid://d1jn05e1skdr1" path="res://icon.svg" id="1_xknv7"]
+[ext_resource type="PackedScene" uid="uid://1okeg3ugo4bp" path="res://scene/manenger/door_manenger.tscn" id="2_xknv7"]
+[ext_resource type="PackedScene" uid="uid://caf46q8pr7b1" path="res://scene/Objects/door.tscn" id="3_sykrn"]
+[ext_resource type="PackedScene" uid="uid://bxnlyl223637e" path="res://scene/characters/CharacterController.tscn" id="4_chpr6"]
+[ext_resource type="PackedScene" uid="uid://dtvx515qn1mqa" path="res://scene/Objects/plate.tscn" id="5_osrdo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ouv0n"]
+distance = -646.0
+
+[node name="Node2D" type="Node2D" unique_id=2032457586]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=172321485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=247970255]
+shape = SubResource("WorldBoundaryShape2D_ouv0n")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=553077966]
+position = Vector2(564.99994, 711)
+scale = Vector2(10.5, 1)
+texture = ExtResource("1_xknv7")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1864179125]
+position = Vector2(576, 334)
+scale = Vector2(0.7421871, 1.9687501)
+
+[node name="DoorManenger" parent="." unique_id=562858353 node_paths=PackedStringArray("door", "plate") instance=ExtResource("2_xknv7")]
+position = Vector2(15, 16)
+door = NodePath("../Door")
+plate = NodePath("../Plate")
+metadata/_edit_group_ = true
+
+[node name="Door" parent="." unique_id=1230933883 instance=ExtResource("3_sykrn")]
+position = Vector2(1109, 586)
+
+[node name="Plate" parent="." unique_id=389975681 instance=ExtResource("5_osrdo")]
+position = Vector2(451, 646)
+
+[node name="Node2D" parent="." unique_id=1070954308 instance=ExtResource("4_chpr6")]
+position = Vector2(52, 306)

@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://caf46q8pr7b1"]
+
+[ext_resource type="Script" uid="uid://bvya2qmdh8kx6" path="res://scripts/Objects/door.gd" id="1_6f0a2"]
+[ext_resource type="Texture2D" uid="uid://d1jn05e1skdr1" path="res://icon.svg" id="2_2m6hl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lx3ii"]
+size = Vector2(56, 123)
+
+[node name="Door" type="Area2D" unique_id=1230933883]
+script = ExtResource("1_6f0a2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=435119932]
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_lx3ii")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=859134356]
+position = Vector2(-1, 0)
+scale = Vector2(0.4921875, 1)
+texture = ExtResource("2_2m6hl")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1231531653]
+position = Vector2(-35, -87)
+scale = Vector2(0.120000005, 0.120000005)
+texture = ExtResource("2_2m6hl")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1658910029]
+position = Vector2(0, -89)
+scale = Vector2(0.120000005, 0.120000005)
+texture = ExtResource("2_2m6hl")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1550492298]
+position = Vector2(33, -88)
+scale = Vector2(0.120000005, 0.120000005)
+texture = ExtResource("2_2m6hl")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

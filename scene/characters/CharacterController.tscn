@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bxnlyl223637e"]
+
+[ext_resource type="Script" uid="uid://d3e3nqivefu23" path="res://scripts/Controllers/CharacterController.gd" id="1_fpqhu"]
+[ext_resource type="PackedScene" uid="uid://mmhmpinwclxy" path="res://scene/characters/player.tscn" id="2_abn7o"]
+
+[node name="Node2D" type="Node2D" unique_id=1070954308]
+script = ExtResource("1_fpqhu")
+spider = ExtResource("2_abn7o")
+
+[node name="player" parent="." unique_id=1440679220 instance=ExtResource("2_abn7o")]
