@@ -22,7 +22,7 @@ scale = Vector2(10.5, 1)
 texture = ExtResource("1_xknv7")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1864179125]
-position = Vector2(576, 334)
+position = Vector2(585, 355)
 scale = Vector2(0.7421871, 1.9687501)
 
 [node name="DoorManenger" parent="." unique_id=562858353 node_paths=PackedStringArray("door", "plate") instance=ExtResource("2_xknv7")]

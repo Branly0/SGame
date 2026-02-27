@@ -24,9 +24,9 @@ func _process(delta: float) -> void:
 		door.is_open = false
 		door.state = 1
 	print(timer.time_left)
-	if timer.time_left <=2 and timer_has_started and timer.time_left != 0:
+	if timer.time_left < 3 and timer_has_started and timer.time_left != 0:
 		door.state = 2
-
+	delta
 func _on_timer_timeout() -> void:
 	door.is_open = true
 	door.state = 3
